@@ -2,11 +2,16 @@
     box-sizing: border-box
     margin: 0
     padding: 0
-
+    &::selection
+        color: white
+        background-color: #1B191A
+:root
+    --clr-primary: #5B5F97
 body
     overflow-x: hidden
     min-height: 100vh
-    font-family: helvetica
+    font-family: lexend
+    color: #1B191A
 .container
     height: 100vh
     display: grid
@@ -23,6 +28,8 @@ body
         width: 100%
         height: 100%
     header
+        user-select: none
+        pointer-events: none
         backdrop-filter: blur(3px)
         padding: 10px
         z-index: 2
@@ -56,10 +63,63 @@ body
         background-color: rgba(0, 0, 0, 0.6)
         a
             all: unset
-            color: #067231
+            color: #5B5F97
+            cursor: pointer
 .main
-    background-color: white
+    padding-top: 5vh
+    background-color: #CCA43B
+    --padding: 2rem
+    .text
+        padding: 0 var(--padding) 1rem
     .form
         #form
+            header, .form-grid, .submit
+                padding: 1rem var(--padding)
+            header, .form-grid
+                background-color: #E5E5E5
             input
                 display: block
+                border: 1px #ddd solid
+                border-radius: 3px
+                height: 20px
+                color: inherit
+                font-family: inherit
+                font-size: 70%
+                padding: 10px 5px
+            input:focus
+                outline: 2px var(--clr-primary) solid
+                //outline-width: 2px
+                //outline-style: solid
+                //outline-color: var(--clr-primary)
+            header
+                padding:
+                    top: 1rem
+                    bottom: 0
+            label
+                text-transform: uppercase
+                font-size: 60%
+            .form-grid
+                display: grid
+                grid-template-columns: 40% 60%
+                gap: .5rem 1.5rem
+                div
+                    label
+                        display: block
+                        margin: 5px 0
+                    small
+                        color: red
+                        font-size: 60%
+                .error
+                    input
+                        outline: 1px red solid
+            .submit
+                button
+                    outline: none
+                    border: none
+                    background-color: #5B5F97
+                    color: white
+                    padding: .5rem 1.5rem
+                    border-radius: 5px
+
+button
+    font-family: inherit

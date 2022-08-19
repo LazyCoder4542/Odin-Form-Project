@@ -33,25 +33,52 @@
                     <p>You <em>know</em> you want to.</p>
                 </section>
                 <section class="form">
-                    <h3>Let's do this!</h3>
                     <form id="form" action="#">
-                        <label for="first-name">First Name</label>
-                        <input type="text" name="first-name">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" name="last-name">
-                        <label for="email">Email</label>
-                        <input type="email" name="email">
-                        <label for="phone-number">Phone Number</label>
-                        <input type="number" name="phone-number">
-                        <label for="password">Password</label>
-                        <input type="password" name="password">
-                        <label for="confirm-password">Confirm Password</label>
-                        <input type="password" name="confirm-password">
+                        <header>
+                            <h3>Let's do this!</h3>
+                        </header>
+                        <div class="form-grid">
+                            <div>
+                                <label for="first-name">First Name</label>
+                                <input type="text" name="first-name" id="first-name">
+                                <small id="error"></small>
+                            </div>
+                            <div>
+                                <label for="last-name">Last Name</label>
+                                <input type="text" name="last-name" id="last-name">
+                                <small id="error"></small>
+                            </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email">
+                                <small id="error"></small>
+                            </div>
+                            <div>
+                                <label for="phone-number">Phone Number</label>
+                                <input type="tel" name="phone-number" id="phone-number">
+                                <small id="error"></small>
+                            </div>
+                            <div>
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password">
+                                <small id="error"></small>
+                            </div>
+                            <div>
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" name="confirm-password" id="confirm-password">
+                                <small id="error"></small>
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <button type="submit">Create Account</button>
+                            <p>Already have an account? <a href="#">Log In</a></p>
+                        </div>
                     </form>
                 </section>
             </main>
         </div>
     </div>
+    <script src="scripts/scripts.js"></script>
 </body>
 
 </html>

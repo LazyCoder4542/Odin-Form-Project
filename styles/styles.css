@@ -3,11 +3,20 @@
   margin: 0;
   padding: 0;
 }
+*::selection {
+  color: white;
+  background-color: #1B191A;
+}
+
+:root {
+  --clr-primary: #5B5F97;
+}
 
 body {
   overflow-x: hidden;
   min-height: 100vh;
-  font-family: helvetica;
+  font-family: lexend;
+  color: #1B191A;
 }
 
 .container {
@@ -30,6 +39,8 @@ body {
   height: 100%;
 }
 .page-bg header {
+  user-select: none;
+  pointer-events: none;
   backdrop-filter: blur(3px);
   padding: 10px;
   z-index: 2;
@@ -65,12 +76,70 @@ body {
 }
 .page-bg p.accreditation a {
   all: unset;
-  color: #067231;
+  color: #5B5F97;
+  cursor: pointer;
 }
 
 .main {
-  background-color: white;
+  padding-top: 5vh;
+  background-color: #CCA43B;
+  --padding: 2rem;
+}
+.main .text {
+  padding: 0 var(--padding) 1rem;
+}
+.main .form #form header, .main .form #form .form-grid, .main .form #form .submit {
+  padding: 1rem var(--padding);
+}
+.main .form #form header, .main .form #form .form-grid {
+  background-color: #E5E5E5;
 }
 .main .form #form input {
   display: block;
+  border: 1px #ddd solid;
+  border-radius: 3px;
+  height: 20px;
+  color: inherit;
+  font-family: inherit;
+  font-size: 70%;
+  padding: 10px 5px;
+}
+.main .form #form input:focus {
+  outline: 2px var(--clr-primary) solid;
+}
+.main .form #form header {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+.main .form #form label {
+  text-transform: uppercase;
+  font-size: 60%;
+}
+.main .form #form .form-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 0.5rem 1.5rem;
+}
+.main .form #form .form-grid div label {
+  display: block;
+  margin: 5px 0;
+}
+.main .form #form .form-grid div small {
+  color: red;
+  font-size: 60%;
+}
+.main .form #form .form-grid .error input {
+  outline: 1px red solid;
+}
+.main .form #form .submit button {
+  outline: none;
+  border: none;
+  background-color: #5B5F97;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+}
+
+button {
+  font-family: inherit;
 }
