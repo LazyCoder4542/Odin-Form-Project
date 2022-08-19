@@ -93,5 +93,3 @@ const fields = ['first-name', 'last-name', 'email', 'password', 'confirm-passwor
 const validator = new formValidator(form, fields)
 
 validator.initialise()
-var reg = /@|([0-9])/g  //\S+@\S+./
-console.log([...'2Sj@]1234,saad'.match(reg)]);
