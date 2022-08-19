@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Norse';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Norse Bold'), url('Norse-Bold.otf') format('opentype'),
+        url('Norse-Bold.otf') format('opentype');
+}
