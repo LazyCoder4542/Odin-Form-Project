@@ -42,18 +42,14 @@ class formValidator {
             }
             else if (field.id == 'password') {
                 var re = /(([A-Z]+)([0-9]+)([a-z]+))|(([0-9]+)([A-Z]+)([a-z]+))|(([0-9]+)([a-z]+)([A-Z]+))|(([A-Z]+)([a-z]+)([0-9]+))|(([a-z]+)([A-Z]+)([0-9]+))|(([a-z]+)([0-9]+)([A-Z]+))/
-                if (re.test(field.value)) {
-                    this.setStatus(field, null, 'success')
-                }
-                else {
-                    console.log('no')
+                if (!re.test(field.value)) {
                     this.setStatus(field, '*must contain at least one lowercase, uppercase and digit', 'error')
                 }
-                if (field.value.length >= 6 && field.value != '123456') {
-                    this.setStatus(field, null, 'success')
+                else if (!(field.value.length >= 6)) {
+                    this.setStatus(field, '*minimum of 6', 'error')
                 }
                 else {
-                    this.setStatus(field, '*minimum of 6 and cannot be 123456', 'error')
+                    this.setStatus(field, null, 'success')
                 }
                 try {
                     if (this.form.querySelector('#password_confirmation').value != field.value) {
