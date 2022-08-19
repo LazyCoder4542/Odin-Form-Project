@@ -88,7 +88,7 @@ class formValidator {
 }
 
 const form = document.querySelector('#form');
-const fields = ['first-name', 'last-name', 'email', 'password', 'confirm-password']
+const fields = ['first-name', 'last-name', 'email', 'phone-number', 'password', 'confirm-password']
 
 const validator = new formValidator(form, fields)
 
