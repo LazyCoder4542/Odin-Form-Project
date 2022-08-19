@@ -151,3 +151,33 @@ a {
   color: #5B5F97;
   cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .page-bg {
+    height: 50vh;
+  }
+  .page-bg header {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+  .page-bg p.accreditation {
+    width: auto;
+    right: 0;
+    display: table;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main {
+    --padding: 1rem;
+  }
+  .main .form #form input {
+    width: 100%;
+  }
+  .main .form #form .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

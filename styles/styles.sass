@@ -37,14 +37,12 @@ body
         margin-top: 25%
         display: flex
         width: 100%
-        //background-color: rgba(255, 255, 255, 0.2)
         background-color: rgba(0, 0, 0, 0.3)
         color: white
         justify-content: center
         place-items: center
         column-gap: .5rem
         .logo
-            //filter: invert(1)
             width: 80px
             object-fit: contain
         h1
@@ -126,3 +124,26 @@ a
     all: unset
     color: #5B5F97
     cursor: pointer
+
+@media screen and ( max-width: 700px )
+    .container
+        grid-template-columns: 1fr
+    .page-bg
+        height: 50vh
+        header
+            top: 50%
+            transform: translateY(-50%)
+            margin: 0
+        p.accreditation
+            width: auto
+            right: 0
+            display: table
+@media screen and ( max-width: 500px )
+    .main
+        --padding: 1rem
+        .form
+            #form
+                input
+                    width: 100%
+                .form-grid
+                    grid-template-columns: 1fr
